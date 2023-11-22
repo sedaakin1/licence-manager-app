@@ -1,0 +1,12 @@
+[
+{"id":1,"name":"Katrina","customer_tenant_id":1,"email":"kesgate0@wikipedia.org","is_active":false,"created_at":"2/15/2023"},
+{"id":2,"name":"Grannie","customer_tenant_id":2,"email":"gbeatens1@infoseek.co.jp","is_active":false,"created_at":"6/5/2023"},
+{"id":3,"name":"Orazio","customer_tenant_id":3,"email":"odunnet2@wisc.edu","is_active":true,"created_at":"2/5/2023"},
+{"id":4,"name":"Shellysheldon","customer_tenant_id":4,"email":"sfairest3@domainmarket.com","is_active":false,"created_at":"5/17/2023"},
+{"id":5,"name":"Candice","customer_tenant_id":5,"email":"cfincke4@soundcloud.com","is_active":true,"created_at":"3/13/2023"},
+{"id":6,"name":"Bibbie","customer_tenant_id":6,"email":"bhadkins5@cocolog-nifty.com","is_active":false,"created_at":"3/23/2023"},
+{"id":7,"name":"Bradan","customer_tenant_id":7,"email":"bmacalester6@google.com.au","is_active":false,"created_at":"2/16/2023"},
+{"id":8,"name":"Renado","customer_tenant_id":8,"email":"rcronk7@sciencedirect.com","is_active":false,"created_at":"11/27/2022"},
+{"id":9,"name":"Maurizia","customer_tenant_id":9,"email":"mglaysher8@slashdot.org","is_active":false,"created_at":"6/14/2023"},
+{"id":10,"name":"Glenn","customer_tenant_id":10,"email":"glorryman9@mozilla.com","is_active":true,"created_at":"7/27/2023"}
+]
