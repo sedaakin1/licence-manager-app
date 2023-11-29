@@ -5,7 +5,8 @@ import tenants from '../../api/tenants.json';
 import Select from 'react-select';
 import {createLicenseManagerCustomer, getAllLicenseManagerCustomers} from '../../services/broker';
 import Header from '../../components/Header';
-import { RiUserLocationLine } from "react-icons/ri";
+import { FaGear } from "react-icons/fa6";
+import { Link } from 'react-router-dom';
 
 
 const MainContainer = styled.div`
@@ -22,7 +23,7 @@ const GridContainer = styled.div`
   gap: 30px;
   background: white;
   border: 2px solid #808080;
-  border-radius: 10px;
+  border-radius: 7px;
   padding: 10px;
   max-width: 35%;
   width: 100%;
@@ -69,10 +70,10 @@ const Table = styled.table`
 
 const TableRow = styled.tr`
   &:nth-child(even) {
-    background-color: #f2f2f2; /* Beyaz arka plan */
+    background-color: #f2f2f2;
   }
   &:nth-child(odd) {
-    background-color: #ccc; /* Gri arka plan */
+    background-color: #ccc;
   }
   border-bottom: 1px solid #ccc;
 
@@ -92,7 +93,7 @@ const ButtonContainer = styled.div`
   width: 100%;
   position: absolute;
   top: 150px;
-  right: 575px;
+  right: 570px;
 `;
 
 const AddButton = styled.button`
@@ -139,10 +140,14 @@ const CustomerList = () => {
         <tbody>
         {customers.map((customer) => (
           <TableRow key={customer.id}>
-            <TableCell><p>Active</p></TableCell>
+            <TableCell>{customer.is_active ? "Aktif": "Pasif"}</TableCell>
             <TableCell>{customer.name}</TableCell>
             <TableCell>{customer.email}</TableCell>
-            <TableCell><RiUserLocationLine /></TableCell>
+            <TableCell>
+            <Link to={`/customer/edit/${customer.id}`}>
+            <FaGear />
+            </Link>
+            </TableCell>
           </TableRow>
         ))}
         </tbody>

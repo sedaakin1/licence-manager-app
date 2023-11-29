@@ -53,7 +53,6 @@ const TextInput = styled.input`
   font-size: 16px;
 `;
 
-
 const SelectStyle = styled.div`
 width: 320px;
 font-size: 16px;
@@ -66,7 +65,7 @@ const AddCustomer = () => {
     name:"",
     email:"",
     customerTenantId:"",
-    selectedTenant:"",
+    
   })
 
   const options = tenants.map((tenant) => ({
@@ -94,7 +93,7 @@ const AddCustomer = () => {
   const handleChangeForm = (e) => {
     setForm({
       ...form,
-      [e.target.id]: e.target.value
+      [e.target.id]: e.target.value,
     })
   }
 
@@ -111,11 +110,10 @@ const AddCustomer = () => {
                     <SelectStyle>
                       <Select
                         options={options}
-                        value={form.tenant}
+                        value={options.find(x => x.value == form.customerTenantId)}
                         onChange={(selectedOption) => {
                           setForm({
                             ...form,
-                            selectedTenant:selectedOption,
                             customerTenantId:selectedOption.value
                           })
                         }}
