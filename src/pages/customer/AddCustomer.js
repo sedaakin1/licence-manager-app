@@ -8,8 +8,7 @@ import { useNavigate } from 'react-router-dom';
 
 
 const MainContainer = styled.div`
-  background: linear-gradient(to bottom, rgba(175, 178, 184, 1) 10%, rgba(208, 210, 212, 1) 25%, rgba(231, 233, 236, 1) 50%, rgba(208, 210, 212, 1) 76%, rgba(175, 178, 184, 1) 90%);
-  
+  background: #F5F5F5;
   height: 100vh;
 `;
 
@@ -20,12 +19,11 @@ const GridContainer = styled.div`
   align-items: center;
   gap: 30px;
   background: white;
-  border: 2px solid #808080;
-  border-radius: 20px;
+  border-radius: 10px;
   padding: 50px;
   max-width: 35%;
   margin: 80px auto 0;
-  
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 `;
 
 const InputRow = styled.div`
@@ -38,7 +36,7 @@ const InputRow = styled.div`
 
 const InputLabel = styled.div`
   font-size: 18px;
-  color: #808080;
+  color: #333;
   width: 300px;
   &:hover {
     color: #42b983;
@@ -51,6 +49,9 @@ const TextInput = styled.input`
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 16px;
+  color: #333;
+  &::placeholder {
+    color: #42b983;
 `;
 
 const SelectStyle = styled.div`
@@ -65,7 +66,6 @@ const AddCustomer = () => {
     name:"",
     email:"",
     customerTenantId:"",
-    
   })
 
   const options = tenants.map((tenant) => ({
@@ -141,7 +141,18 @@ const AddCustomer = () => {
                       onChange={(e) => setForm({...form,email:e.target.value})}
                     />
                   </InputRow>
-                  <button type="button" onClick={handleSubmit}>Formu Gönder</button>
+                  <button type="button" onClick={handleSubmit}
+                  style={{
+                    backgroundColor: "#42b983",
+                    color: "#fff",
+                    borderRadius: "5px",
+                    border: "none",
+                    cursor: "pointer",
+                    marginTop: "20px",
+                    height: "25px",
+                  }}>
+                  Formu Gönder
+                  </button>
                 </div>
                        
         </GridContainer>

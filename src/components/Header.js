@@ -3,9 +3,11 @@ import styled from 'styled-components';
 
 
 const Navbar = styled.div`
-  background: #383E42;
+  background: #676D72;
   color: white;
   padding: 60px 0;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -16,6 +18,7 @@ const NavbarTitle = styled.h1`
   font-size: 35px;
   margin: 0;
   padding: 0;
+  color: #42b983;
   text-align: center;
   position: absolute;
   left: 50%;

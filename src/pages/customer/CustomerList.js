@@ -10,8 +10,7 @@ import { Link } from 'react-router-dom';
 
 
 const MainContainer = styled.div`
-  background: linear-gradient(to bottom, rgba(175, 178, 184, 1) 10%, rgba(208, 210, 212, 1) 25%, rgba(231, 233, 236, 1) 50%, rgba(208, 210, 212, 1) 76%, rgba(175, 178, 184, 1) 90%);
-
+  background: #F5F5F5;
   height: 100vh;
 `;
 
@@ -22,14 +21,25 @@ const GridContainer = styled.div`
   align-items: center;
   gap: 30px;
   background: white;
-  border: 2px solid #808080;
-  border-radius: 7px;
-  padding: 10px;
-  max-width: 35%;
+  border-radius: 10px;
+  max-width: 45%;
   width: 100%;
   margin: 80px auto 0;
   overflow-y: auto;
-  max-height: 500px;
+  max-height: 475px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+
+  &::-webkit-scrollbar {
+    width: 7px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #42b983;
+    border-radius: 10px;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: #f5f5f5;
+    border-radius: 10px;
+  }
 `;
 
 const InputRow = styled.div`
@@ -37,7 +47,6 @@ const InputRow = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  
 `;
 
 const InputLabel = styled.div`
@@ -70,12 +79,12 @@ const Table = styled.table`
 
 const TableRow = styled.tr`
   &:nth-child(even) {
-    background-color: #f2f2f2;
+    background-color: #E8F4E8;
   }
   &:nth-child(odd) {
-    background-color: #ccc;
+    background-color: #fff;
   }
-  border-bottom: 1px solid #ccc;
+  border-bottom: 5px solid #fff;
 
   &:last-child {
     border-bottom: none;
@@ -83,8 +92,9 @@ const TableRow = styled.tr`
 `;
 
 const TableCell = styled.td`
-  padding: 10px;
+  padding: 13px;
   color: #333;
+  text-align: center;
 `;
 
 const ButtonContainer = styled.div`
@@ -93,7 +103,7 @@ const ButtonContainer = styled.div`
   width: 100%;
   position: absolute;
   top: 150px;
-  right: 570px;
+  right: 510px;
 `;
 
 const AddButton = styled.button`
@@ -125,7 +135,7 @@ const CustomerList = () => {
             <AddButton onClick={() => navigate('/customer/add')}>
               Yeni Müşteri Ekle
             </AddButton>
-          </ButtonContainer>
+        </ButtonContainer>
 
         <GridContainer>
         <Table>

@@ -9,7 +9,7 @@ import Toggle from 'react-toggle';
 import tenants from '../../api/tenants.json';
 
 const MainContainer = styled.div`
-  background: linear-gradient(to bottom, rgba(175, 178, 184, 1) 10%, rgba(208, 210, 212, 1) 25%, rgba(231, 233, 236, 1) 50%, rgba(208, 210, 212, 1) 76%, rgba(175, 178, 184, 1) 90%);
+  background: #F5F5F5;
   height: 100vh;
 `;
 
@@ -20,25 +20,23 @@ const GridContainer = styled.div`
   align-items: center;
   gap: 30px;
   background: white;
-  border: 2px solid #808080;
-  border-radius: 20px;
+  border-radius: 10px;
   padding: 50px;
   max-width: 35%;
   margin: 80px auto 0;
-  
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 `;
 
 const InputRow = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
-  
+  width: 100%;  
 `;
 
 const InputLabel = styled.div`
   font-size: 18px;
-  color: #808080;
+  color: #333;
   width: 300px;
   &:hover {
     color: #42b983;
@@ -56,6 +54,7 @@ const TextInput = styled.input`
 const SelectStyle = styled.div`
 width: 320px;
 font-size: 16px;
+color: #333;
 `;
 
 const ToggleButton = ({id, checked, onChange}) => (
@@ -191,15 +190,40 @@ const EditCustomer = () => {
               />
             </InputRow>
 
-            <button onClick={handleSubmit}>
+            <button onClick={handleSubmit}
+            style={{
+                    backgroundColor: "#42b983",
+                    color: "#fff",
+                    borderRadius: "5px",
+                    border: "none",
+                    cursor: "pointer",
+                    marginTop: "20px",
+                    height: "25px",
+            }}>
               Güncelle
             </button>
             {!form.isActiveButton && 
-            <button onClick={handleDelete}>
+            <button onClick={handleDelete}
+            style={{
+                    backgroundColor: "#42b983",
+                    color: "#fff",
+                    borderRadius: "5px",
+                    border: "none",
+                    cursor: "pointer",
+                    height: "25px",
+            }}>
               Sil
             </button>
             }
-            <button onClick={e => navigate("/customer/list")}>
+            <button onClick={e => navigate("/customer/list")}
+            style={{
+                    backgroundColor: "#42b983",
+                    color: "#fff",
+                    borderRadius: "5px",
+                    border: "none",
+                    cursor: "pointer",
+                    height: "25px",
+            }}>
               İptal
             </button>
 
